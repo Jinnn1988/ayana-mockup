@@ -779,37 +779,86 @@
       </div>
     </div>
     <div class="col">
-      <h3 class="next">改后 — 今日 tab (默认进 彩奈 tab, 这里展示今日)</h3>
+      <h3 class="next">改后 v2 — 今日 tab (高级感重做, 默认进 彩奈 tab)</h3>
       <div class="iphone"><div class="island"></div>
-        <div class="screen">
+        <div class="screen" style="background: linear-gradient(180deg, #fafbfc 0%, #f0f1f5 100%);">
           <div class="statusbar"><span>9:41</span><span class="right"><span class="sb-wifi"></span><span class="sb-bat"></span></span></div>
-          <div class="navbar large"><span class="navbar-title large">今日</span><span></span></div>
-          <div style="background: var(--gray-bg); flex: 1; padding: 10px 0; overflow: auto;">
-            <div class="today-card">
-              <div class="h" style="color: var(--warn);">等你决策</div>
-              <div class="b">仙台站前希尔顿 — 6/1 入住, 彩奈找到 2 个候补。批准我帮你订?</div>
-              <div class="a">查看 &rsaquo;</div>
+          <div style="padding: 12px 20px 0;">
+            <div style="font-size: 13px; color: var(--sub); letter-spacing: 0.3px; text-transform: uppercase;">5 月 3 日 星期六</div>
+            <div style="font-size: 30px; font-weight: 700; letter-spacing: -0.6px; margin-top: 2px;">早, 爷爷</div>
+            <div style="font-size: 13px; color: var(--sub); margin-top: 4px;">3 件等你看一眼</div>
+          </div>
+          <div style="flex: 1; padding: 18px 16px 12px; overflow: auto; display: flex; flex-direction: column; gap: 14px;">
+            <div style="background: linear-gradient(135deg, #ffffff 0%, #fff5e6 100%); border-radius: 18px; padding: 18px; box-shadow: 0 6px 20px rgba(255, 149, 0, 0.10), 0 1px 3px rgba(0,0,0,0.04); border: 1px solid rgba(255, 149, 0, 0.18);">
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                <span style="width: 24px; height: 24px; border-radius: 8px; background: var(--warn); display: inline-flex; align-items: center; justify-content: center;">
+                  <span style="width: 3px; height: 12px; background: white; border-radius: 1.5px;"></span>
+                </span>
+                <div style="font-size: 11px; color: var(--warn); font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase;">等你决策</div>
+              </div>
+              <div style="font-size: 15px; line-height: 1.45; color: var(--ink);">仙台站前希尔顿, 6/1 入住。我找到 2 个候补, 批准我帮你订?</div>
+              <div style="display: flex; gap: 6px; margin-top: 12px;">
+                <div style="flex: 1; padding: 8px; background: var(--accent); color: white; border-radius: 10px; text-align: center; font-size: 13px; font-weight: 600;">看候补 + 决定</div>
+                <div style="padding: 8px 14px; background: rgba(0,0,0,0.04); color: var(--sub); border-radius: 10px; font-size: 13px;">推迟</div>
+              </div>
             </div>
-            <div class="today-card">
-              <div class="h">REINS 日报</div>
-              <div class="b">目黒区 3 套新着 / 中目黒 1 套降价 50万 / 上目黒 1 套售出</div>
-              <div class="a">看 PDF &rsaquo;</div>
+            <div style="background: var(--card); border-radius: 18px; padding: 18px; box-shadow: 0 2px 10px rgba(0,0,0,0.04);">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <div style="font-size: 11px; color: var(--accent); font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase;">REINS 日报</div>
+                <div style="font-size: 11px; color: var(--sub);">今天</div>
+              </div>
+              <div style="display: flex; justify-content: space-around; margin-bottom: 10px;">
+                <div style="text-align: center;"><div style="font-size: 22px; font-weight: 700; color: var(--accent);">3</div><div style="font-size: 10px; color: var(--sub); margin-top: 2px;">新着</div></div>
+                <div style="width: 1px; background: var(--line);"></div>
+                <div style="text-align: center;"><div style="font-size: 22px; font-weight: 700; color: var(--warn);">1</div><div style="font-size: 10px; color: var(--sub); margin-top: 2px;">降价</div></div>
+                <div style="width: 1px; background: var(--line);"></div>
+                <div style="text-align: center;"><div style="font-size: 22px; font-weight: 700; color: var(--sub);">1</div><div style="font-size: 10px; color: var(--sub); margin-top: 2px;">售出</div></div>
+              </div>
+              <div style="font-size: 13px; color: var(--ink); line-height: 1.4;">目黒区 + 中目黒 + 上目黒</div>
+              <div style="font-size: 12px; color: var(--accent); margin-top: 8px; font-weight: 600;">看完整 PDF →</div>
             </div>
-            <div class="today-card">
-              <div class="h">价格动向</div>
-              <div class="b">你 watch 的 「目黒3-1-1 マンション」 价格降 80万 → 8900万</div>
-              <div class="a">看详情 &rsaquo;</div>
+            <div style="background: var(--card); border-radius: 18px; padding: 18px; box-shadow: 0 2px 10px rgba(0,0,0,0.04);">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <div style="flex: 1;">
+                  <div style="font-size: 11px; color: var(--teal); font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase; margin-bottom: 6px;">价格动向</div>
+                  <div style="font-size: 13px; color: var(--ink); line-height: 1.4;">目黒3-1-1 マンション</div>
+                  <div style="display: flex; align-items: baseline; gap: 6px; margin-top: 6px;">
+                    <span style="font-size: 17px; font-weight: 700; color: var(--ink);">¥8,900万</span>
+                    <span style="font-size: 12px; color: var(--teal); font-weight: 600;">↓ 80万</span>
+                    <span style="font-size: 11px; color: var(--sub); text-decoration: line-through;">¥8,980万</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="today-card">
-              <div class="h">今日提醒</div>
-              <div class="b">明天 14:00 中目黒 2-5-3 戸建 内見</div>
-              <div class="a">导航过去 &rsaquo;</div>
+            <div style="background: var(--card); border-radius: 18px; padding: 16px; box-shadow: 0 2px 10px rgba(0,0,0,0.04); display: flex; align-items: center; gap: 14px;">
+              <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #007aff, #5ac8fa); border-radius: 14px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white;">
+                <div style="font-size: 9px; line-height: 1; opacity: 0.85;">14:00</div>
+                <div style="font-size: 13px; font-weight: 700; line-height: 1; margin-top: 1px;">明日</div>
+              </div>
+              <div style="flex: 1;">
+                <div style="font-size: 13px; font-weight: 600; color: var(--ink);">中目黒 2-5-3 戸建 内見</div>
+                <div style="font-size: 11px; color: var(--sub); margin-top: 2px;">徒歩 14 分 · 现在出发 22 分</div>
+              </div>
+              <div style="font-size: 14px; color: var(--accent); font-weight: 600;">→</div>
             </div>
           </div>
-          <div class="tabbar">
-            <div class="tab active"><span class="icon">今</span>今日</div>
-            <div class="tab"><span class="icon">房</span>房源</div>
-            <div class="tab"><span class="icon">A</span>彩奈</div>
+          <div style="margin-top: 0; height: 76px; background: var(--card); border-top: 1px solid rgba(0,0,0,0.06); backdrop-filter: blur(20px); display: flex; padding: 8px 0 24px;">
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; color: var(--accent);">
+              <div style="width: 24px; height: 24px; background: var(--accent); border-radius: 6px; opacity: 0.85; display: flex; align-items: center; justify-content: center;">
+                <div style="width: 12px; height: 12px; border: 1.5px solid white; border-radius: 2px; border-top: 4px solid white;"></div>
+              </div>
+              <div style="font-size: 10px; font-weight: 600;">今日</div>
+            </div>
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; color: var(--sub);">
+              <div style="width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;">
+                <div style="width: 14px; height: 14px; border: 1.5px solid currentColor; border-radius: 2px;"></div>
+              </div>
+              <div style="font-size: 10px;">房源</div>
+            </div>
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; color: var(--sub);">
+              <div style="width: 24px; height: 24px; border-radius: 50%; background: linear-gradient(135deg, #ff66c4, #ff8ad8); display: flex; align-items: center; justify-content: center; color: white; font-size: 11px; font-weight: 700;">A</div>
+              <div style="font-size: 10px;">彩奈</div>
+            </div>
           </div>
         </div>
       </div>
