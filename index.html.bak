@@ -100,8 +100,8 @@
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
-  .col h3.now::before { content: "差 "; }
-  .col h3.next::before { content: " "; color: var(--teal); }
+  .col h3.now::before { content: "👎 "; }
+  .col h3.next::before { content: "✨ "; color: var(--teal); }
 
   /* iPhone frame */
   .iphone {
@@ -508,22 +508,6 @@
   .dark-frame .input-bar { background: #1c1c1e; border-color: #2c2c2e; }
   .dark-frame .input-cap { background: #2c2c2e; color: #8e8e93; }
   .dark-frame .agent-label { color: #5ac8fa; }
-  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-  /* in-app monochrome icons (no emoji) */
-  .ic { display: inline-block; vertical-align: middle; line-height: 1; }
-  .ic-mic { width: 14px; height: 18px; background: currentColor; border-radius: 7px 7px 7px 7px / 8px 8px 5px 5px; position: relative; }
-  .ic-mic::after { content: ""; position: absolute; bottom: -5px; left: 50%; transform: translateX(-50%); width: 8px; height: 4px; background: currentColor; border-radius: 0 0 4px 4px; }
-  .ic-call { width: 14px; height: 14px; background: currentColor; mask: radial-gradient(circle at 100% 100%, transparent 50%, black 51%); -webkit-mask: radial-gradient(circle at 100% 100%, transparent 50%, black 51%); border-radius: 0 0 0 50%; }
-  .ic-cam { width: 18px; height: 14px; background: currentColor; border-radius: 3px; position: relative; }
-  .ic-cam::after { content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 6px; height: 6px; background: var(--card); border-radius: 50%; }
-  .ic-stop { display: inline-block; width: 12px; height: 12px; background: currentColor; border-radius: 2px; }
-  .sb-wifi { display: inline-block; width: 14px; height: 10px; background: currentColor; mask: radial-gradient(circle at 50% 100%, black 30%, transparent 31%); -webkit-mask: radial-gradient(circle at 50% 100%, black 30%, transparent 31%); }
-  .sb-bat { display: inline-block; width: 22px; height: 11px; border: 1.2px solid currentColor; border-radius: 3px; position: relative; margin-left: 6px; }
-  .sb-bat::before { content: ""; position: absolute; right: -3px; top: 3px; width: 2px; height: 5px; background: currentColor; border-radius: 0 1px 1px 0; }
-  .sb-bat::after { content: ""; position: absolute; top: 1px; left: 1px; bottom: 1px; width: 70%; background: currentColor; border-radius: 1.5px; }
-  .dot-danger { display: inline-block; width: 8px; height: 8px; background: var(--danger); border-radius: 50%; vertical-align: middle; }
-  .dot-ok { display: inline-block; width: 8px; height: 8px; background: var(--teal); border-radius: 50%; vertical-align: middle; }
-
 </style>
 
 <!-- ============================================================ -->
@@ -545,7 +529,7 @@
       <h3 class="next">改后</h3>
       <div class="iphone"><div class="island"></div>
         <div class="screen">
-          <div class="statusbar"><span>9:41</span><span class="right"><span class="sb-wifi"></span><span class="sb-bat"></span></span></div>
+          <div class="statusbar"><span>9:41</span><span class="right">📶 🔋</span></div>
           <div class="navbar"><span>取消</span><span class="navbar-title">设置</span><span style="color: var(--accent);">完成</span></div>
           <div style="background: var(--gray-bg); flex: 1; padding: 8px 0; overflow: auto;">
             <div class="form-section">
@@ -602,17 +586,17 @@
       <h3 class="next">改后</h3>
       <div class="iphone"><div class="island"></div>
         <div class="screen">
-          <div class="statusbar"><span>9:41</span><span class="right"><span class="sb-wifi"></span><span class="sb-bat"></span></span></div>
+          <div class="statusbar"><span>9:41</span><span class="right">📶 🔋</span></div>
           <div class="navbar"><span style="color: var(--accent);">取消</span><span class="navbar-title">拍图问彩奈</span><span></span></div>
           <div style="background: var(--gray-bg); flex: 1; padding: 14px;">
             <div style="background: var(--card); border-radius: 14px; padding: 16px;">
               <div style="background: var(--gray-bg); border-radius: 10px; height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--sub);">
-                <div style="font-size: 36px;"><span class="ic ic-cam"></span></div>
+                <div style="font-size: 36px;">📷</div>
                 <div style="font-size: 13px; margin-top: 8px;">选张图给彩奈看</div>
               </div>
               <div style="display: flex; gap: 8px; margin-top: 14px;">
-                <div style="flex:1; background: var(--accent); color: #fff; padding: 10px; border-radius: 8px; text-align: center; font-size: 14px; font-weight: 600;"><span class="ic ic-cam"></span> 拍照</div>
-                <div style="flex:1; background: var(--gray-bg); color: var(--accent); padding: 10px; border-radius: 8px; text-align: center; font-size: 14px; font-weight: 600;">相册 相册</div>
+                <div style="flex:1; background: var(--accent); color: #fff; padding: 10px; border-radius: 8px; text-align: center; font-size: 14px; font-weight: 600;">📷 拍照</div>
+                <div style="flex:1; background: var(--gray-bg); color: var(--accent); padding: 10px; border-radius: 8px; text-align: center; font-size: 14px; font-weight: 600;">🖼️ 相册</div>
               </div>
             </div>
             <div style="margin-top: 14px;">
@@ -655,30 +639,30 @@
       <h3 class="next">改后 v2 (能力 chip 列表 + ayana 反问)</h3>
       <div class="iphone"><div class="island"></div>
         <div class="screen">
-          <div class="statusbar"><span>9:41</span><span class="right"><span class="sb-wifi"></span><span class="sb-bat"></span></span></div>
-          <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span class="navbar-toolbar">通话&nbsp;&nbsp;拍图&nbsp;&nbsp;设置</span></div>
+          <div class="statusbar"><span>9:41</span><span class="right">📶 🔋</span></div>
+          <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span class="navbar-toolbar">📞 📷 ⚙️</span></div>
           <div style="background: var(--gray-bg); flex: 1; padding: 18px 16px 8px; display: flex; flex-direction: column; gap: 14px; overflow: auto;">
             <div style="display: flex; align-items: center; gap: 10px;">
               <div style="width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, #ff66c4, #ff8ad8); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 600;">彩</div>
-              <div style="font-size: 15px; line-height: 1.4;">早，爷爷。<br><span style="color: var(--sub); font-size: 12px;">能干这些 戳一个</span></div>
+              <div style="font-size: 15px; line-height: 1.4;">早, 爷爷。<br><span style="color: var(--sub); font-size: 12px;">能干这些 ↓ 戳一个</span></div>
             </div>
             <div style="display: flex; flex-wrap: wrap; gap: 6px;">
-              <div style="background: var(--card); border: 1px solid var(--line); padding: 6px 12px; border-radius: 16px; font-size: 12px;">找房</div>
-              <div style="background: var(--card); border: 1px solid var(--line); padding: 6px 12px; border-radius: 16px; font-size: 12px;">今日 REINS</div>
-              <div style="background: var(--card); border: 1px solid var(--line); padding: 6px 12px; border-radius: 16px; font-size: 12px;">国内酒店</div>
-              <div style="background: var(--card); border: 1px solid var(--line); padding: 6px 12px; border-radius: 16px; font-size: 12px;">新干线</div>
-              <div style="background: var(--card); border: 1px solid var(--line); padding: 6px 12px; border-radius: 16px; font-size: 12px;">国际航班</div>
-              <div style="background: var(--card); border: 1px solid var(--line); padding: 6px 12px; border-radius: 16px; font-size: 12px;">找餐厅</div>
-              <div style="background: var(--card); border: 1px solid var(--line); padding: 6px 12px; border-radius: 16px; font-size: 12px;">点外卖</div>
-              <div style="background: var(--card); border: 1px solid var(--line); padding: 6px 12px; border-radius: 16px; font-size: 12px;">高级旅馆</div>
-              <div style="background: var(--card); border: 1px solid var(--line); padding: 6px 12px; border-radius: 16px; font-size: 12px;">找路</div>
-              <div style="background: var(--card); border: 1px solid var(--line); padding: 6px 12px; border-radius: 16px; font-size: 12px;">拍图问</div>
-              <div style="background: var(--card); border: 1px solid var(--line); padding: 6px 12px; border-radius: 16px; font-size: 12px;">写邮件</div>
-              <div style="background: var(--card); border: 1px solid var(--line); padding: 6px 12px; border-radius: 16px; font-size: 12px;">上网查</div>
+              <div style="background: var(--card); border: 1px solid var(--line); padding: 6px 12px; border-radius: 16px; font-size: 12px;">🏘️ 找房</div>
+              <div style="background: var(--card); border: 1px solid var(--line); padding: 6px 12px; border-radius: 16px; font-size: 12px;">📰 今日 REINS</div>
+              <div style="background: var(--card); border: 1px solid var(--line); padding: 6px 12px; border-radius: 16px; font-size: 12px;">🏨 国内酒店</div>
+              <div style="background: var(--card); border: 1px solid var(--line); padding: 6px 12px; border-radius: 16px; font-size: 12px;">🚄 新干线</div>
+              <div style="background: var(--card); border: 1px solid var(--line); padding: 6px 12px; border-radius: 16px; font-size: 12px;">✈️ 国际航班</div>
+              <div style="background: var(--card); border: 1px solid var(--line); padding: 6px 12px; border-radius: 16px; font-size: 12px;">🍣 找餐厅</div>
+              <div style="background: var(--card); border: 1px solid var(--line); padding: 6px 12px; border-radius: 16px; font-size: 12px;">🍔 点外卖</div>
+              <div style="background: var(--card); border: 1px solid var(--line); padding: 6px 12px; border-radius: 16px; font-size: 12px;">🍶 高级旅馆</div>
+              <div style="background: var(--card); border: 1px solid var(--line); padding: 6px 12px; border-radius: 16px; font-size: 12px;">📍 找路</div>
+              <div style="background: var(--card); border: 1px solid var(--line); padding: 6px 12px; border-radius: 16px; font-size: 12px;">📷 拍图问</div>
+              <div style="background: var(--card); border: 1px solid var(--line); padding: 6px 12px; border-radius: 16px; font-size: 12px;">📧 写邮件</div>
+              <div style="background: var(--card); border: 1px solid var(--line); padding: 6px 12px; border-radius: 16px; font-size: 12px;">🌐 上网查</div>
             </div>
-            <div style="font-size: 11px; color: var(--sub); margin: 6px 0 0;">比如戳「国内酒店」我会问你去哪、什么时候</div>
+            <div style="font-size: 11px; color: var(--sub); margin: 6px 0 0;">↑ 比如戳"国内酒店" — 我会问你去哪、什么时候</div>
           </div>
-          <div class="input-bar"><div class="input-cap"><span class="ic ic-mic"></span> 聊点啥</div><div class="send-btn">↑</div></div>
+          <div class="input-bar"><div class="input-cap">🎤 聊点啥</div><div class="send-btn">↑</div></div>
         </div>
       </div>
     </div>
@@ -687,33 +671,33 @@
   <div style="margin: 12px 0 8px; font-size: 13px; color: var(--sub);">点 chip 后 ayana 反问示例 (示范 3 个)</div>
   <div class="compare" style="grid-template-columns: 1fr 1fr 1fr;">
     <div class="col">
-      <h3 style="font-size: 11px; color: var(--sub);">点 点外卖</h3>
+      <h3 style="font-size: 11px; color: var(--sub);">点 🍔 点外卖</h3>
       <div class="iphone"><div class="island"></div>
         <div class="screen">
-          <div class="statusbar"><span>9:41</span><span class="right"><span class="sb-wifi"></span><span class="sb-bat"></span></span></div>
+          <div class="statusbar"><span>9:41</span><span class="right">📶 🔋</span></div>
           <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span></span></div>
           <div class="chat-body">
-            <div class="bubble owner">点外卖</div>
+            <div class="bubble owner">🍔 点外卖</div>
             <div class="agent-label">Ayana</div>
-            <div class="bubble agent">是不是饿了。想吃点什么 寿司 / 拉面 / 烧肉, 还是别的</div>
+            <div class="bubble agent">是不是饿了 😋<br>想吃点什么? 寿司 / 拉面 / 烧肉, 还是别的</div>
             <div class="quick-replies">
               <div class="qr-chip">寿司</div>
               <div class="qr-chip">拉面</div>
               <div class="qr-chip">别的</div>
             </div>
           </div>
-          <div class="input-bar"><div class="input-cap"><span class="ic ic-mic"></span></div><div class="send-btn">↑</div></div>
+          <div class="input-bar"><div class="input-cap">🎤</div><div class="send-btn">↑</div></div>
         </div>
       </div>
     </div>
     <div class="col">
-      <h3 style="font-size: 11px; color: var(--sub);">点 国内酒店</h3>
+      <h3 style="font-size: 11px; color: var(--sub);">点 🏨 国内酒店</h3>
       <div class="iphone"><div class="island"></div>
         <div class="screen">
-          <div class="statusbar"><span>9:41</span><span class="right"><span class="sb-wifi"></span><span class="sb-bat"></span></span></div>
+          <div class="statusbar"><span>9:41</span><span class="right">📶 🔋</span></div>
           <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span></span></div>
           <div class="chat-body">
-            <div class="bubble owner">国内酒店</div>
+            <div class="bubble owner">🏨 国内酒店</div>
             <div class="agent-label">Ayana</div>
             <div class="bubble agent">去哪儿啊?<br>什么时候?</div>
             <div class="quick-replies">
@@ -724,18 +708,18 @@
               <div class="qr-chip">下周末</div>
             </div>
           </div>
-          <div class="input-bar"><div class="input-cap"><span class="ic ic-mic"></span></div><div class="send-btn">↑</div></div>
+          <div class="input-bar"><div class="input-cap">🎤</div><div class="send-btn">↑</div></div>
         </div>
       </div>
     </div>
     <div class="col">
-      <h3 style="font-size: 11px; color: var(--sub);">点 新干线</h3>
+      <h3 style="font-size: 11px; color: var(--sub);">点 🚄 新干线</h3>
       <div class="iphone"><div class="island"></div>
         <div class="screen">
-          <div class="statusbar"><span>9:41</span><span class="right"><span class="sb-wifi"></span><span class="sb-bat"></span></span></div>
+          <div class="statusbar"><span>9:41</span><span class="right">📶 🔋</span></div>
           <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span></span></div>
           <div class="chat-body">
-            <div class="bubble owner">新干线</div>
+            <div class="bubble owner">🚄 新干线</div>
             <div class="agent-label">Ayana</div>
             <div class="bubble agent">从哪到哪? 哪天?</div>
             <div class="quick-replies">
@@ -744,7 +728,7 @@
               <div class="qr-chip">明天上午</div>
             </div>
           </div>
-          <div class="input-bar"><div class="input-cap"><span class="ic ic-mic"></span></div><div class="send-btn">↑</div></div>
+          <div class="input-bar"><div class="input-cap">🎤</div><div class="send-btn">↑</div></div>
         </div>
       </div>
     </div>
@@ -782,34 +766,34 @@
       <h3 class="next">改后 — 今日 tab (默认进 彩奈 tab, 这里展示今日)</h3>
       <div class="iphone"><div class="island"></div>
         <div class="screen">
-          <div class="statusbar"><span>9:41</span><span class="right"><span class="sb-wifi"></span><span class="sb-bat"></span></span></div>
-          <div class="navbar large"><span class="navbar-title large">今日</span><span></span></div>
+          <div class="statusbar"><span>9:41</span><span class="right">📶 🔋</span></div>
+          <div class="navbar large"><span class="navbar-title large">今日</span><span class="navbar-toolbar">🔔</span></div>
           <div style="background: var(--gray-bg); flex: 1; padding: 10px 0; overflow: auto;">
             <div class="today-card">
-              <div class="h" style="color: var(--warn);">等你决策</div>
+              <div class="h">⚠️ 等你决策</div>
               <div class="b">仙台站前希尔顿 — 6/1 入住, 彩奈找到 2 个候补。批准我帮你订?</div>
-              <div class="a">查看 &rsaquo;</div>
+              <div class="a">查看 ›</div>
             </div>
             <div class="today-card">
-              <div class="h">REINS 日报</div>
+              <div class="h">📰 REINS 日报</div>
               <div class="b">目黒区 3 套新着 / 中目黒 1 套降价 50万 / 上目黒 1 套售出</div>
-              <div class="a">看 PDF &rsaquo;</div>
+              <div class="a">看 PDF ›</div>
             </div>
             <div class="today-card">
-              <div class="h">价格动向</div>
+              <div class="h">💰 价格动向</div>
               <div class="b">你 watch 的 「目黒3-1-1 マンション」 价格降 80万 → 8900万</div>
-              <div class="a">看详情 &rsaquo;</div>
+              <div class="a">看详情 ›</div>
             </div>
             <div class="today-card">
-              <div class="h">今日提醒</div>
+              <div class="h">📅 今日提醒</div>
               <div class="b">明天 14:00 中目黒 2-5-3 戸建 内見</div>
-              <div class="a">导航过去 &rsaquo;</div>
+              <div class="a">导航过去 ›</div>
             </div>
           </div>
           <div class="tabbar">
-            <div class="tab active"><span class="icon">今</span>今日</div>
-            <div class="tab"><span class="icon">房</span>房源</div>
-            <div class="tab"><span class="icon">A</span>彩奈</div>
+            <div class="tab active"><span class="icon">📰</span>今日</div>
+            <div class="tab"><span class="icon">🏠</span>房源</div>
+            <div class="tab"><span class="icon">💬</span>彩奈</div>
           </div>
         </div>
       </div>
@@ -846,19 +830,19 @@
       <h3 class="next">改后 (用过几次后, ayana 自己问)</h3>
       <div class="iphone"><div class="island"></div>
         <div class="screen">
-          <div class="statusbar"><span>9:41</span><span class="right"><span class="sb-wifi"></span><span class="sb-bat"></span></span></div>
-          <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span class="navbar-toolbar">通话&nbsp;&nbsp;拍图&nbsp;&nbsp;设置</span></div>
+          <div class="statusbar"><span>9:41</span><span class="right">📶 🔋</span></div>
+          <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span class="navbar-toolbar">📞 📷 ⚙️</span></div>
           <div class="chat-body">
             <div class="bubble owner" style="align-self: flex-end;">查一下今天目黒区</div>
             <div class="agent-label">Ayana</div>
-            <div class="bubble agent">目黒区, 今日新规 3 件 (REINS 已查)</div>
-            <div class="bubble agent">爷爷，有件事问你。我查到结果时，你不在 app 也想知道吗?</div>
+            <div class="bubble agent">目黒区, 今日新规 3 件 ✨</div>
+            <div class="bubble agent">爷爷, 有件事问你 — 我查到结果时, 你不在 app 也想知道吗?</div>
             <div class="quick-replies">
               <div class="qr-chip">想知道, 给我推</div>
               <div class="qr-chip">不用</div>
             </div>
           </div>
-          <div class="input-bar"><div class="input-cap"><span class="ic ic-mic"></span> 聊点啥</div><div class="send-btn">↑</div></div>
+          <div class="input-bar"><div class="input-cap">🎤 聊点啥</div><div class="send-btn">↑</div></div>
         </div>
       </div>
     </div>
@@ -894,9 +878,9 @@
       <h3 class="next">改后 (inline + 断线 banner)</h3>
       <div class="iphone"><div class="island"></div>
         <div class="screen">
-          <div class="statusbar"><span>9:41</span><span class="right"><span class="sb-wifi"></span><span class="sb-bat"></span></span></div>
-          <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span class="navbar-toolbar">通话&nbsp;&nbsp;拍图&nbsp;&nbsp;设置</span></div>
-          <div class="connection-banner"><span><span class="dot-danger"></span>&nbsp;跟服务器断了, 重连中...</span><span style="font-weight: 600;">重试</span></div>
+          <div class="statusbar"><span>9:41</span><span class="right">📶 🔋</span></div>
+          <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span class="navbar-toolbar">📞 📷 ⚙️</span></div>
+          <div class="connection-banner"><span>🔴 跟服务器断了, 重连中…</span><span style="font-weight: 600;">重试</span></div>
           <div class="chat-body">
             <div class="agent-label">Ayana</div>
             <div class="bubble agent">今日 REINS デイリーレポート届いてる、確認する？</div>
@@ -904,7 +888,7 @@
             <div class="agent-label">Ayana</div>
             <div class="bubble agent">目黒区、今日新規 3 件。<br>　▸ 目黒3-1-1 マンション 8980万<br>　▸ 中目黒2-5-3 戸建 1.2億<br>　▸ 上目黒4-7-2 マンション 7350万</div>
           </div>
-          <div class="input-bar"><div class="input-cap"><span class="ic ic-mic"></span> 聊点啥</div><div class="send-btn">↑</div></div>
+          <div class="input-bar"><div class="input-cap">🎤 聊点啥</div><div class="send-btn">↑</div></div>
         </div>
       </div>
     </div>
@@ -914,7 +898,7 @@
     <ul>
       <li>navigationBarTitleDisplayMode(.inline) — "彩奈" 缩到顶部 status bar 旁边</li>
       <li>删常驻 connectionBar — 在线时屏幕上没有任何状态指示</li>
-      <li>断线时, 从 nav bar 下面 slide 一个 红色 banner: "<span class="dot-danger"></span> 跟服务器断了, 重连中…" + "重试" 按钮</li>
+      <li>断线时, 从 nav bar 下面 slide 一个 红色 banner: "🔴 跟服务器断了, 重连中…" + "重试" 按钮</li>
       <li>重连上 → banner 一秒后 fade 消失</li>
       <li>多省 ~110pt 垂直空间留给聊天</li>
     </ul>
@@ -940,7 +924,7 @@
       <h3 class="next">改后 — 分类 + ayana 语气</h3>
       <div class="iphone"><div class="island"></div>
         <div class="screen" style="background: rgba(0,0,0,0.4);">
-          <div class="statusbar" style="color: #fff;"><span>9:41</span><span class="right"><span class="sb-wifi"></span><span class="sb-bat"></span></span></div>
+          <div class="statusbar" style="color: #fff;"><span>9:41</span><span class="right">📶 🔋</span></div>
           <div class="alert-box">
             <div class="t">嗯, 跟服务器连不上了</div>
             <div class="b">可能你网不太行, 或者服务器在重启<br>等十秒再试一下?</div>
@@ -984,8 +968,8 @@
       <h3 class="next">改后 (跳点 bubble 在 chat 里)</h3>
       <div class="iphone"><div class="island"></div>
         <div class="screen">
-          <div class="statusbar"><span>9:41</span><span class="right"><span class="sb-wifi"></span><span class="sb-bat"></span></span></div>
-          <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span class="navbar-toolbar">通话&nbsp;&nbsp;拍图&nbsp;&nbsp;设置</span></div>
+          <div class="statusbar"><span>9:41</span><span class="right">📶 🔋</span></div>
+          <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span class="navbar-toolbar">📞 📷 ⚙️</span></div>
           <div class="chat-body">
             <div class="bubble owner">查一下目黒区今天有啥新房</div>
             <div class="agent-label">Ayana</div>
@@ -996,7 +980,7 @@
             </div>
             <div style="font-size: 11px; color: var(--sub); margin-left: 6px;">彩奈在查 REINS…</div>
           </div>
-          <div class="input-bar"><div class="input-cap"><span class="ic ic-mic"></span> 聊点啥</div><div class="send-btn">↑</div></div>
+          <div class="input-bar"><div class="input-cap">🎤 聊点啥</div><div class="send-btn">↑</div></div>
         </div>
       </div>
     </div>
@@ -1025,18 +1009,18 @@
       <h3 class="now">长按现 menu (3 项)</h3>
       <div class="iphone"><div class="island"></div>
         <div class="screen">
-          <div class="statusbar"><span>9:41</span><span class="right"><span class="sb-wifi"></span><span class="sb-bat"></span></span></div>
-          <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span class="navbar-toolbar">通话&nbsp;&nbsp;拍图&nbsp;&nbsp;设置</span></div>
+          <div class="statusbar"><span>9:41</span><span class="right">📶 🔋</span></div>
+          <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span class="navbar-toolbar">📞 📷 ⚙️</span></div>
           <div class="chat-body">
             <div class="agent-label">Ayana</div>
             <div class="bubble agent" style="filter: brightness(1.05);">目黒3-1-1 マンション、お買い得です。</div>
             <div style="background: var(--card); border-radius: 12px; margin: 8px 12px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-              <div style="padding: 12px 16px; border-bottom: 1px solid var(--line); font-size: 14px;">复制</div>
-              <div style="padding: 12px 16px; border-bottom: 1px solid var(--line); font-size: 14px;">选多条</div>
-              <div style="padding: 12px 16px; font-size: 14px; color: var(--danger);">删除</div>
+              <div style="padding: 12px 16px; border-bottom: 1px solid var(--line); font-size: 14px;">📋 复制</div>
+              <div style="padding: 12px 16px; border-bottom: 1px solid var(--line); font-size: 14px;">☑️ 选多条</div>
+              <div style="padding: 12px 16px; font-size: 14px; color: var(--danger);">🗑️ 删除</div>
             </div>
           </div>
-          <div class="input-bar"><div class="input-cap"><span class="ic ic-mic"></span> 聊点啥</div><div class="send-btn">↑</div></div>
+          <div class="input-bar"><div class="input-cap">🎤 聊点啥</div><div class="send-btn">↑</div></div>
         </div>
       </div>
     </div>
@@ -1044,27 +1028,29 @@
       <h3 class="next">改后 (6 项 + emoji 反馈)</h3>
       <div class="iphone"><div class="island"></div>
         <div class="screen">
-          <div class="statusbar"><span>9:41</span><span class="right"><span class="sb-wifi"></span><span class="sb-bat"></span></span></div>
-          <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span class="navbar-toolbar">通话&nbsp;&nbsp;拍图&nbsp;&nbsp;设置</span></div>
+          <div class="statusbar"><span>9:41</span><span class="right">📶 🔋</span></div>
+          <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span class="navbar-toolbar">📞 📷 ⚙️</span></div>
           <div class="chat-body">
             <div class="agent-label">Ayana</div>
             <div class="bubble agent" style="filter: brightness(1.05);">目黒3-1-1 マンション、お買い得です。</div>
-            <div style="background: var(--card); border-radius: 22px; margin: 4px 12px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: flex; gap: 4px; padding: 6px; justify-content: space-around;">
-              <div style="flex: 1; text-align: center; padding: 8px 4px; font-size: 13px; color: var(--accent); border-radius: 14px; background: rgba(10,132,255,0.08); font-weight: 600;">好</div>
-              <div style="flex: 1; text-align: center; padding: 8px 4px; font-size: 13px; color: var(--ink); border-radius: 14px;">一般</div>
-              <div style="flex: 1; text-align: center; padding: 8px 4px; font-size: 13px; color: var(--danger); border-radius: 14px;">不行</div>
-              <div style="flex: 1; text-align: center; padding: 8px 4px; font-size: 13px; color: var(--warn); border-radius: 14px;">收藏</div>
+            <div style="background: var(--card); border-radius: 28px; margin: 4px 12px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: flex; gap: 4px; padding: 8px; justify-content: space-around;">
+              <div style="font-size: 22px;">👍</div>
+              <div style="font-size: 22px;">❤️</div>
+              <div style="font-size: 22px;">😂</div>
+              <div style="font-size: 22px;">✨</div>
+              <div style="font-size: 22px;">🤔</div>
+              <div style="font-size: 22px;">👏</div>
             </div>
             <div style="background: var(--card); border-radius: 12px; margin: 8px 12px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-              <div style="padding: 10px 16px; border-bottom: 1px solid var(--line); font-size: 14px;">复制</div>
-              <div style="padding: 10px 16px; border-bottom: 1px solid var(--line); font-size: 14px;">引用回复</div>
-              <div style="padding: 10px 16px; border-bottom: 1px solid var(--line); font-size: 14px;">翻译成中文</div>
-              <div style="padding: 10px 16px; border-bottom: 1px solid var(--line); font-size: 14px;">收藏</div>
-              <div style="padding: 10px 16px; border-bottom: 1px solid var(--line); font-size: 14px;">选多条</div>
-              <div style="padding: 10px 16px; font-size: 14px; color: var(--danger);">删除</div>
+              <div style="padding: 10px 16px; border-bottom: 1px solid var(--line); font-size: 14px;">📋 复制</div>
+              <div style="padding: 10px 16px; border-bottom: 1px solid var(--line); font-size: 14px;">↩️ 引用回复</div>
+              <div style="padding: 10px 16px; border-bottom: 1px solid var(--line); font-size: 14px;">🌐 翻译成中文</div>
+              <div style="padding: 10px 16px; border-bottom: 1px solid var(--line); font-size: 14px;">⭐ 收藏</div>
+              <div style="padding: 10px 16px; border-bottom: 1px solid var(--line); font-size: 14px;">☑️ 选多条</div>
+              <div style="padding: 10px 16px; font-size: 14px; color: var(--danger);">🗑️ 删除</div>
             </div>
           </div>
-          <div class="input-bar"><div class="input-cap"><span class="ic ic-mic"></span> 聊点啥</div><div class="send-btn">↑</div></div>
+          <div class="input-bar"><div class="input-cap">🎤 聊点啥</div><div class="send-btn">↑</div></div>
         </div>
       </div>
     </div>
@@ -1072,7 +1058,7 @@
   <div class="spec">
     <strong>Spec:</strong>
     <ul>
-      <li>顶部 emoji 反馈条 (好收藏笑想想赞): 点 = 一键 send 反馈给 ayana, backend 写到 FeedbackHistory.sentiment + 学到 owner 偏好 (抄 LINE/WhatsApp)</li>
+      <li>顶部 emoji 反馈条 (👍❤️😂✨🤔👏): 点 = 一键 send 反馈给 ayana, backend 写到 FeedbackHistory.sentiment + 学到 owner 偏好 (抄 LINE/WhatsApp)</li>
       <li>菜单加 <strong>引用回复</strong>: tap = 把这条 quote 进 inputBar, owner 直接接着对话</li>
       <li>菜单加 <strong>翻译</strong>: 自动检测 ja → zh / zh → ja / en → ja, tap = 调 backend 翻译 endpoint, 翻译结果 inline 替换 (再点一次还原原文)</li>
       <li>菜单加 <strong>收藏</strong>: 永久存到 owner saved-pref, 之后 ayana 检索更精准</li>
@@ -1095,174 +1081,64 @@
       <h3 class="now">现在 (toggle, 已录中)</h3>
       <div class="iphone"><div class="island"></div>
         <div class="screen">
-          <div class="statusbar"><span>9:41</span><span class="right"><span class="sb-wifi"></span><span class="sb-bat"></span></span></div>
-          <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span class="navbar-toolbar">通话&nbsp;&nbsp;拍图&nbsp;&nbsp;设置</span></div>
+          <div class="statusbar"><span>9:41</span><span class="right">📶 🔋</span></div>
+          <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span class="navbar-toolbar">📞 📷 ⚙️</span></div>
           <div class="chat-body">
             <div class="bubble owner">查仙台</div>
           </div>
           <div class="input-bar">
             <div class="input-cap" style="color: var(--ink);">
-              <span style="color: var(--danger); font-size: 18px;"><span class="ic ic-stop"></span></span>
+              <span style="color: var(--danger); font-size: 18px;">⏹</span>
               查目黒区今天有没有新房
             </div>
             <div class="send-btn" style="opacity: 0.5;">↑</div>
           </div>
-          <div style="background: var(--card); padding: 6px 14px; font-size: 11px; color: var(--sub); text-align: center;">点 <span class="ic ic-stop"></span> 结束录音</div>
+          <div style="background: var(--card); padding: 6px 14px; font-size: 11px; color: var(--sub); text-align: center;">点 ⏹ 结束录音</div>
         </div>
       </div>
     </div>
     <div class="col">
-      <h3 class="next">改后 (按住, 锁定 + 取消 + 实时波形)</h3>
+      <h3 class="next">改后 (按住, 实时波形)</h3>
       <div class="iphone"><div class="island"></div>
         <div class="screen">
-          <div class="statusbar"><span>9:41</span><span class="right"><span class="sb-wifi"></span><span class="sb-bat"></span></span></div>
-          <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span class="navbar-toolbar">通话&nbsp;&nbsp;拍图&nbsp;&nbsp;设置</span></div>
-          <div class="chat-body" style="position: relative; justify-content: flex-end; padding-bottom: 0;">
-            <!-- 浮动锁定指示器 (上滑触发) -->
-            <div style="position: absolute; right: 22px; bottom: 110px; display: flex; flex-direction: column; align-items: center; gap: 6px; opacity: 0.85;">
-              <div style="width: 36px; height: 50px; background: var(--card); border: 1.5px solid var(--line); border-radius: 18px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;">
-                <div style="width: 14px; height: 10px; border: 1.5px solid var(--sub); border-radius: 7px 7px 0 0; border-bottom: none;"></div>
-                <div style="width: 18px; height: 12px; background: var(--sub); border-radius: 2px;"></div>
+          <div class="statusbar"><span>9:41</span><span class="right">📶 🔋</span></div>
+          <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span class="navbar-toolbar">📞 📷 ⚙️</span></div>
+          <div class="chat-body">
+            <div style="margin: auto;">
+              <div style="text-align: center; color: var(--sub); font-size: 12px; margin-bottom: 16px;">⬆️ 上滑取消 / 锁定</div>
+              <div style="background: rgba(255, 59, 48, 0.1); padding: 14px 24px; border-radius: 28px; display: flex; align-items: center; gap: 10px;">
+                <span style="color: var(--danger); font-size: 18px;">●</span>
+                <span style="font-family: monospace;">0:08</span>
+                <span style="display: flex; gap: 2px;">
+                  <span style="width: 3px; height: 14px; background: var(--accent); border-radius: 2px;"></span>
+                  <span style="width: 3px; height: 22px; background: var(--accent); border-radius: 2px;"></span>
+                  <span style="width: 3px; height: 10px; background: var(--accent); border-radius: 2px;"></span>
+                  <span style="width: 3px; height: 28px; background: var(--accent); border-radius: 2px;"></span>
+                  <span style="width: 3px; height: 16px; background: var(--accent); border-radius: 2px;"></span>
+                  <span style="width: 3px; height: 24px; background: var(--accent); border-radius: 2px;"></span>
+                  <span style="width: 3px; height: 12px; background: var(--accent); border-radius: 2px;"></span>
+                  <span style="width: 3px; height: 20px; background: var(--accent); border-radius: 2px;"></span>
+                </span>
               </div>
-              <div style="font-size: 9px; color: var(--sub); font-weight: 600;">↑</div>
-            </div>
-            <!-- 录音状态 pill -->
-            <div style="background: var(--card); margin: 0 14px 10px; padding: 10px 16px; border-radius: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 10px;">
-              <span class="dot-danger" style="animation: pulse 1.2s infinite;"></span>
-              <span style="font-family: -apple-system, monospace; font-size: 14px; font-weight: 500; color: var(--ink); min-width: 38px;">0:08</span>
-              <span style="display: flex; gap: 2px; flex: 1; align-items: center; height: 28px;">
-                <span style="width: 2px; height: 8px; background: var(--accent); border-radius: 1px;"></span>
-                <span style="width: 2px; height: 18px; background: var(--accent); border-radius: 1px;"></span>
-                <span style="width: 2px; height: 12px; background: var(--accent); border-radius: 1px;"></span>
-                <span style="width: 2px; height: 24px; background: var(--accent); border-radius: 1px;"></span>
-                <span style="width: 2px; height: 16px; background: var(--accent); border-radius: 1px;"></span>
-                <span style="width: 2px; height: 20px; background: var(--accent); border-radius: 1px;"></span>
-                <span style="width: 2px; height: 10px; background: var(--accent); border-radius: 1px;"></span>
-                <span style="width: 2px; height: 22px; background: var(--accent); border-radius: 1px;"></span>
-                <span style="width: 2px; height: 14px; background: var(--accent); border-radius: 1px;"></span>
-                <span style="width: 2px; height: 26px; background: var(--accent); border-radius: 1px;"></span>
-                <span style="width: 2px; height: 12px; background: var(--accent); border-radius: 1px;"></span>
-                <span style="width: 2px; height: 18px; background: var(--accent); border-radius: 1px;"></span>
-                <span style="width: 2px; height: 8px; background: var(--accent); border-radius: 1px;"></span>
-              </span>
             </div>
           </div>
-          <div class="input-bar" style="background: var(--card);">
-            <div class="input-cap" style="background: var(--gray-bg); color: var(--sub); flex: 1;">
-              <span style="font-size: 12px;">←&nbsp;&nbsp;滑动取消</span>
-            </div>
-            <div style="width: 56px; height: 56px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 0 0 10px rgba(10, 132, 255, 0.18), 0 0 0 18px rgba(10, 132, 255, 0.06); position: relative;">
-              <span class="ic ic-mic" style="color: white;"></span>
-            </div>
+          <div class="input-bar">
+            <div class="input-cap">⬆️ 松开发送, 上滑取消</div>
+            <div style="width: 60px; height: 60px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 0 0 8px rgba(10, 132, 255, 0.2);">🎤</div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <div style="margin: 12px 0 8px; font-size: 13px; color: var(--sub);">3 状态流: 静止 → 按住录音 → 锁定 hands-free</div>
-  <div class="compare" style="grid-template-columns: 1fr 1fr 1fr;">
-    <div class="col">
-      <h3 style="font-size: 11px; color: var(--sub);">1. 静止</h3>
-      <div class="iphone"><div class="island"></div>
-        <div class="screen">
-          <div class="statusbar"><span>9:41</span><span class="right"><span class="sb-wifi"></span><span class="sb-bat"></span></span></div>
-          <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span></span></div>
-          <div class="chat-body" style="justify-content: flex-end;">
-            <div class="bubble agent">需要啥跟我说</div>
-          </div>
-          <div class="input-bar">
-            <div class="input-cap"><span class="ic ic-mic"></span> 聊点啥</div>
-            <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--gray-bg); display: flex; align-items: center; justify-content: center; color: var(--sub);"><span class="ic ic-mic"></span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <h3 style="font-size: 11px; color: var(--sub);">2. 按住录音</h3>
-      <div class="iphone"><div class="island"></div>
-        <div class="screen">
-          <div class="statusbar"><span>9:41</span><span class="right"><span class="sb-wifi"></span><span class="sb-bat"></span></span></div>
-          <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span></span></div>
-          <div class="chat-body" style="position: relative; justify-content: flex-end;">
-            <div style="position: absolute; right: 22px; bottom: 110px; display: flex; flex-direction: column; align-items: center; gap: 4px; opacity: 0.85;">
-              <div style="width: 32px; height: 44px; background: var(--card); border: 1.5px solid var(--line); border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;">
-                <div style="width: 10px; height: 8px; border: 1.2px solid var(--sub); border-radius: 5px 5px 0 0; border-bottom: none;"></div>
-                <div style="width: 14px; height: 9px; background: var(--sub); border-radius: 1px;"></div>
-              </div>
-            </div>
-            <div style="background: var(--card); margin: 0 14px 10px; padding: 10px 14px; border-radius: 22px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 8px;">
-              <span class="dot-danger"></span>
-              <span style="font-size: 13px; min-width: 32px;">0:08</span>
-              <span style="display: flex; gap: 1.5px; flex: 1; height: 22px; align-items: center;">
-                <span style="width: 2px; height: 6px; background: var(--accent);"></span>
-                <span style="width: 2px; height: 14px; background: var(--accent);"></span>
-                <span style="width: 2px; height: 10px; background: var(--accent);"></span>
-                <span style="width: 2px; height: 18px; background: var(--accent);"></span>
-                <span style="width: 2px; height: 12px; background: var(--accent);"></span>
-                <span style="width: 2px; height: 16px; background: var(--accent);"></span>
-                <span style="width: 2px; height: 8px; background: var(--accent);"></span>
-                <span style="width: 2px; height: 20px; background: var(--accent);"></span>
-                <span style="width: 2px; height: 11px; background: var(--accent);"></span>
-              </span>
-            </div>
-          </div>
-          <div class="input-bar">
-            <div class="input-cap" style="color: var(--sub);"><span style="font-size: 11px;">←&nbsp;滑动取消</span></div>
-            <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 6px rgba(10, 132, 255, 0.2);"><span class="ic ic-mic" style="color: white;"></span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <h3 style="font-size: 11px; color: var(--sub);">3. 锁定 hands-free</h3>
-      <div class="iphone"><div class="island"></div>
-        <div class="screen">
-          <div class="statusbar"><span>9:41</span><span class="right"><span class="sb-wifi"></span><span class="sb-bat"></span></span></div>
-          <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span></span></div>
-          <div class="chat-body" style="justify-content: flex-end;">
-            <div style="background: var(--card); margin: 0 14px 10px; padding: 12px 16px; border-radius: 22px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); display: flex; align-items: center; gap: 10px;">
-              <span class="dot-danger" style="width: 10px; height: 10px;"></span>
-              <span style="font-size: 14px; min-width: 38px; font-weight: 500;">0:42</span>
-              <span style="display: flex; gap: 1.5px; flex: 1; height: 24px; align-items: center;">
-                <span style="width: 2px; height: 8px; background: var(--accent);"></span>
-                <span style="width: 2px; height: 16px; background: var(--accent);"></span>
-                <span style="width: 2px; height: 10px; background: var(--accent);"></span>
-                <span style="width: 2px; height: 22px; background: var(--accent);"></span>
-                <span style="width: 2px; height: 14px; background: var(--accent);"></span>
-                <span style="width: 2px; height: 18px; background: var(--accent);"></span>
-                <span style="width: 2px; height: 8px; background: var(--accent);"></span>
-                <span style="width: 2px; height: 20px; background: var(--accent);"></span>
-              </span>
-              <span style="color: var(--sub); font-size: 12px;">已锁定</span>
-            </div>
-          </div>
-          <div class="input-bar" style="gap: 12px;">
-            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--gray-bg); display: flex; align-items: center; justify-content: center; color: var(--danger);"><span class="ic ic-stop" style="color: var(--danger);"></span></div>
-            <div style="flex: 1; text-align: center; font-size: 13px; color: var(--sub);">说完了点 →</div>
-            <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px;">↑</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <div class="spec">
-    <strong>Spec (抄 WhatsApp + Telegram + Apple Voice Memos):</strong>
+    <strong>Spec:</strong>
     <ul>
-      <li><strong>静止</strong>: input bar 右边小 mic icon (浅灰圆), input cap 左边 mic icon + "聊点啥"</li>
-      <li><strong>tap mic</strong> = 单次 speech-to-text 转文字 (现行为, 保留)</li>
-      <li><strong>long-press mic</strong>: 触觉反馈 (haptic) + mic 放大成大圆 + 蓝色脉冲光环 (3 层 0.18→0.06 透明度) + chat 顶部浮录音 pill (red dot 跳动 + 时长 + 实时波形)</li>
-      <li><strong>滑动手势 2 个</strong>:
-        <ul>
-          <li>左滑 (input cap 提示 "← 滑动取消"): 滑出指定 threshold → 触觉反馈 → 取消, 录音 pill fade 消失</li>
-          <li>上滑 (浮锁定 icon 在 mic 正上方): 滑到 lock target → 锁定, 进 hands-free 模式</li>
-        </ul>
-      </li>
-      <li><strong>松开 (未滑)</strong> = 发送 (默认转文字, owner 设置可切原始音频)</li>
-      <li><strong>锁定模式</strong>: 录音 pill 加 "已锁定" 标 + input bar 变 [取消 stop button] [说完了点 →] [send 圆按钮], owner 双手放下继续讲</li>
-      <li><strong>波形</strong>: 实时 RMS 振幅 → 波形条高度 (调用 AVAudioEngine inputNode 的 buffer level), 12-15 条循环</li>
-      <li>性能: 波形渲染用 Canvas / Metal 不用 SwiftUI body, 60fps 流畅 (R6 同样要求)</li>
+      <li>Tap mic = 单次 speech-to-text 转文字 (现行为, 保留)</li>
+      <li>Long-press mic = 实时录音, 显示波形 + 时长</li>
+      <li>松开 = 发送 (转文字 OR 直接发音频, 看 owner 设置)</li>
+      <li>上滑 = 取消 (滑出指定区域, 触觉反馈)</li>
+      <li>上滑到锁定 icon = hands-free 持续录, 之后再点确认/取消</li>
+      <li>录音中输入栏变色, mic icon 放大 + 脉冲光环 (蓝色 ring)</li>
     </ul>
   </div>
 </div>
@@ -1286,21 +1162,21 @@
       <h3 class="next">改后 (inline strip)</h3>
       <div class="iphone"><div class="island"></div>
         <div class="screen">
-          <div class="statusbar"><span>9:41</span><span class="right"><span class="sb-wifi"></span><span class="sb-bat"></span></span></div>
-          <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span class="navbar-toolbar">通话&nbsp;&nbsp;拍图&nbsp;&nbsp;设置</span></div>
+          <div class="statusbar"><span>9:41</span><span class="right">📶 🔋</span></div>
+          <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span class="navbar-toolbar">📞 📷 ⚙️</span></div>
           <div class="chat-body">
             <div class="agent-label">Ayana</div>
             <div class="bubble agent">什么楼?</div>
             <div class="bubble owner">这个</div>
           </div>
           <div class="photo-strip">
-            <div class="ph cam">相机</div>
-            <div class="ph" style="background: linear-gradient(135deg, #f5b7b1, #c39bd3);"></div>
-            <div class="ph" style="background: linear-gradient(135deg, #aed6f1, #85929e);"></div>
-            <div class="ph" style="background: linear-gradient(135deg, #f9e79f, #f0b27a);"></div>
-            <div class="ph" style="background: linear-gradient(135deg, #d5dbdb, #a3acb2);"></div>
-            <div class="ph doc">文档</div>
-            <div class="ph" style="background: linear-gradient(135deg, #abebc6, #58d68d);"></div>
+            <div class="ph cam">📷</div>
+            <div class="ph" style="background: linear-gradient(135deg, #f5b7b1, #c39bd3);">🏢</div>
+            <div class="ph" style="background: linear-gradient(135deg, #aed6f1, #85929e);">🌃</div>
+            <div class="ph" style="background: linear-gradient(135deg, #f9e79f, #f0b27a);">🏠</div>
+            <div class="ph" style="background: linear-gradient(135deg, #d5dbdb, #a3acb2);">🏗️</div>
+            <div class="ph doc">📄</div>
+            <div class="ph" style="background: linear-gradient(135deg, #abebc6, #58d68d);">🌳</div>
           </div>
           <div class="input-bar">
             <div style="font-size: 22px; color: var(--accent);">×</div>
@@ -1342,25 +1218,25 @@
       <h3 class="next">改后 (留 island 空气 + 中文 status)</h3>
       <div class="iphone"><div class="island"></div>
         <div class="screen" style="background: linear-gradient(180deg, #000 0%, #0d1c1f 100%); color: #fff;">
-          <div class="statusbar" style="color: #fff;"><span>9:41</span><span class="right"><span class="sb-wifi"></span><span class="sb-bat"></span></span></div>
+          <div class="statusbar" style="color: #fff;"><span>9:41</span><span class="right">📶 🔋</span></div>
           <div style="height: 24px;"></div>
           <div style="display: flex; justify-content: space-between; padding: 0 24px; align-items: center;">
             <div style="font-family: monospace; font-size: 18px; font-weight: 500;">00:42</div>
-            <div style="font-size: 11px; color: rgba(255,255,255,0.65);">连着 </div>
+            <div style="font-size: 11px; color: rgba(255,255,255,0.65);">连着 ✓</div>
           </div>
           <div style="flex:1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px; padding: 0 30px;">
             <div style="position: relative; width: 200px; height: 200px; display: flex; align-items: center; justify-content: center;">
               <div class="pulse-ring" style="border-color: rgba(48, 209, 88, 0.4); width: 220px; height: 220px;"></div>
               <div class="pulse-ring" style="border-color: rgba(48, 209, 88, 0.25); width: 260px; height: 260px;"></div>
               <div class="pulse-ring" style="border-color: rgba(48, 209, 88, 0.12); width: 300px; height: 300px;"></div>
-              <div style="width: 148px; height: 148px; border-radius: 50%; background: linear-gradient(135deg, #30d158, #00c7be); display: flex; align-items: center; justify-content: center; font-size: 60px; box-shadow: 0 0 40px rgba(48, 209, 88, 0.4);">A</div>
+              <div style="width: 148px; height: 148px; border-radius: 50%; background: linear-gradient(135deg, #30d158, #00c7be); display: flex; align-items: center; justify-content: center; font-size: 60px; box-shadow: 0 0 40px rgba(48, 209, 88, 0.4);">🗣️</div>
             </div>
             <div style="text-align: center; max-height: 90px; overflow: hidden; opacity: 0.92; font-size: 16px; line-height: 1.4;">
-              「目黒区，今日新規 3 件…」
+              "目黒区, 今日新規 3 件…"
             </div>
           </div>
           <div style="display: flex; justify-content: center; padding-bottom: 32px;">
-            <div style="width: 84px; height: 84px; background: var(--danger); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 20px rgba(255, 59, 48, 0.4);"><span style="width: 32px; height: 4px; background: white; border-radius: 2px; transform: rotate(135deg);"></span></div>
+            <div style="width: 84px; height: 84px; background: var(--danger); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 6px 20px rgba(255, 59, 48, 0.4);">📞</div>
           </div>
         </div>
       </div>
@@ -1371,7 +1247,7 @@
     <ul>
       <li>背景渐变保留, 但<strong>不再</strong> ignoresSafeArea(.top), 给 Dynamic Island 留空气</li>
       <li>Timer / status 区下移 24pt, 不撞 island</li>
-      <li>状态文字改 ayana 语气: "连着 " / "她在听" / "等等就回" / "嗯, 通话断了, 再连一次"</li>
+      <li>状态文字改 ayana 语气: "连着 ✓" / "她在听" / "等等就回" / "嗯, 通话断了, 再连一次"</li>
       <li>挂断按钮加 box-shadow + scale 触感反馈</li>
       <li>3 圈脉冲 ring 改 teal 绿 (跟 ayana 主色更一致, 避免警示感)</li>
     </ul>
@@ -1391,8 +1267,8 @@
       <h3 class="now">现在 (反馈进黑盒, owner 不知道)</h3>
       <div class="iphone"><div class="island"></div>
         <div class="screen">
-          <div class="statusbar"><span>9:41</span><span class="right"><span class="sb-wifi"></span><span class="sb-bat"></span></span></div>
-          <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span class="navbar-toolbar">通话&nbsp;&nbsp;拍图&nbsp;&nbsp;设置</span></div>
+          <div class="statusbar"><span>9:41</span><span class="right">📶 🔋</span></div>
+          <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span class="navbar-toolbar">📞 📷 ⚙️</span></div>
           <div class="chat-body">
             <div class="bubble owner">这套不行 离驅离站太远</div>
             <div class="agent-label">Ayana</div>
@@ -1409,18 +1285,18 @@
       <h3 class="next">改后 (彩奈反馈她学到啥 + 当晚总结)</h3>
       <div class="iphone"><div class="island"></div>
         <div class="screen">
-          <div class="statusbar"><span>9:41</span><span class="right"><span class="sb-wifi"></span><span class="sb-bat"></span></span></div>
-          <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span class="navbar-toolbar">通话&nbsp;&nbsp;拍图&nbsp;&nbsp;设置</span></div>
+          <div class="statusbar"><span>9:41</span><span class="right">📶 🔋</span></div>
+          <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span class="navbar-toolbar">📞 📷 ⚙️</span></div>
           <div class="chat-body">
             <div class="bubble owner">这套不行 离駅太远</div>
             <div class="agent-label">Ayana</div>
-            <div class="bubble agent">嗯, 駅徒歩 5 分钟内才考虑, 记下了。</div>
+            <div class="bubble agent">嗯, 駅徒歩 5 分钟内才考虑, 记下了 ✏️</div>
             <div class="bubble owner">那套不错 中目黒嘛</div>
             <div class="agent-label">Ayana</div>
-            <div class="bubble agent">中目黒 +1 (优先标记)</div>
-            <div class="bubble system">今晚我整理学到的：駅 ≤5 分 / 中目黒优先 / 不要楼龄 ≥40 — 下次按这个找。要改, 戳「偏好」</div>
+            <div class="bubble agent">中目黒 +1 ⭐</div>
+            <div class="bubble system">📔 今晚我整理学到的: 駅 ≤5 分 / 中目黒优先 / 不要楼龄 ≥40 — 下次按这个找。要改 → 戳"偏好"</div>
           </div>
-          <div class="input-bar"><div class="input-cap"><span class="ic ic-mic"></span> 聊点啥</div><div class="send-btn">↑</div></div>
+          <div class="input-bar"><div class="input-cap">🎤 聊点啥</div><div class="send-btn">↑</div></div>
         </div>
       </div>
     </div>
@@ -1429,7 +1305,7 @@
     <strong>Spec:</strong>
     <ul>
       <li>Owner 反馈 (打分 / 嫌弃 / 喜欢) → ayana 在线提取 (LLM 短 prompt) → 落 UserPreference.expires_at + FeedbackHistory.extracted_pref (现在永远 NULL 的字段)</li>
-      <li>每 ~3-5 条反馈, ayana 简短回应学到了啥 ("駅 ≤5 分钟, 记下了 ")</li>
+      <li>每 ~3-5 条反馈, ayana 简短回应学到了啥 ("駅 ≤5 分钟, 记下了 ✏️")</li>
       <li>每天晚上 1 条 system bubble 总结当天偏好变化, owner 看完点 "偏好" tab 可手改</li>
       <li>偏好库可 export CSV (设置 → 偏好 → 导出), owner 看 ayana 全脑里有啥</li>
     </ul>
@@ -1443,7 +1319,7 @@
   <span class="tier p2">P2</span>
   <h2>R14 — N≥3 套房 → 3 列照片栅格 (抄 LINE album)</h2>
   <p class="meta">现在 ayana 推 N 套房用 2-col chip + 大 digest chip, 不够紧凑、不视觉。LINE/iMessage 多照片用 3 列 album 栅格</p>
-  <p class="why">现在 PDF maisoku 链接是文字 chip "图 図面 8980万", owner 看不到房子样子。视觉 buyer 看不到外观就不会有 "想看这套" 的冲动。</p>
+  <p class="why">现在 PDF maisoku 链接是文字 chip "📄 図面 8980万", owner 看不到房子样子。视觉 buyer 看不到外观就不会有 "想看这套" 的冲动。</p>
   <div class="compare">
     <div class="col">
       <h3 class="now">现在 (2-col chip 文字)</h3>
@@ -1455,13 +1331,13 @@
       <h3 class="next">改后 (3-col 照片栅格)</h3>
       <div class="iphone"><div class="island"></div>
         <div class="screen">
-          <div class="statusbar"><span>9:41</span><span class="right"><span class="sb-wifi"></span><span class="sb-bat"></span></span></div>
-          <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span class="navbar-toolbar">通话&nbsp;&nbsp;拍图&nbsp;&nbsp;设置</span></div>
+          <div class="statusbar"><span>9:41</span><span class="right">📶 🔋</span></div>
+          <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span class="navbar-toolbar">📞 📷 ⚙️</span></div>
           <div class="chat-body">
             <div class="bubble owner">查目黒今天</div>
             <div class="agent-label">Ayana</div>
             <div class="bubble agent" style="max-width: 92%; padding: 10px;">
-              <div style="margin-bottom: 8px;">目黒区 今日新规 6 件</div>
+              <div style="margin-bottom: 8px;">目黒区 今日新规 6 件 ✨</div>
               <div class="listing-grid">
                 <div class="cell"><span class="badge">8980万</span>目黒3-1-1</div>
                 <div class="cell"><span class="badge">1.2億</span>中目黒2-5-3</div>
@@ -1477,7 +1353,7 @@
               <div class="qr-chip">按价排序</div>
             </div>
           </div>
-          <div class="input-bar"><div class="input-cap"><span class="ic ic-mic"></span> 聊点啥</div><div class="send-btn">↑</div></div>
+          <div class="input-bar"><div class="input-cap">🎤 聊点啥</div><div class="send-btn">↑</div></div>
         </div>
       </div>
     </div>
@@ -1513,18 +1389,18 @@
       <h3 class="next">改后 (call 突出, gear 隐入 title 长按)</h3>
       <div class="iphone"><div class="island"></div>
         <div class="screen">
-          <div class="statusbar"><span>9:41</span><span class="right"><span class="sb-wifi"></span><span class="sb-bat"></span></span></div>
+          <div class="statusbar"><span>9:41</span><span class="right">📶 🔋</span></div>
           <div class="navbar"><span></span><span class="navbar-title">彩奈 <span style="font-size: 9px; color: var(--sub); margin-left: 4px;">长按打开设置</span></span>
             <span style="display: flex; gap: 8px; align-items: center;">
-              <span style="width: 32px; height: 32px; background: var(--gray-bg); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 16px;"><span class="ic ic-cam"></span></span>
-              <span style="background: var(--accent); color: #fff; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 4px;"><span class="ic ic-call"></span> 通话</span>
+              <span style="width: 32px; height: 32px; background: var(--gray-bg); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 16px;">📷</span>
+              <span style="background: var(--accent); color: #fff; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 4px;">📞 通话</span>
             </span>
           </div>
           <div class="chat-body">
             <div class="agent-label">Ayana</div>
             <div class="bubble agent">今日 REINS 6 件,要现在挑还是晚上一起看?</div>
           </div>
-          <div class="input-bar"><div class="input-cap"><span class="ic ic-mic"></span> 聊点啥</div><div class="send-btn">↑</div></div>
+          <div class="input-bar"><div class="input-cap">🎤 聊点啥</div><div class="send-btn">↑</div></div>
         </div>
       </div>
     </div>
@@ -1536,7 +1412,7 @@
       <li>Camera button 缩小为圆形 secondary, 浅灰 bg + icon — 次 action</li>
       <li>Gear icon <strong>从 toolbar 移出</strong>, 改长按 navigationTitle "彩奈" 进入设置 (用 contextMenu)</li>
       <li>"长按打开设置" 微提示一开始显示, owner 用过一次后 fade 不再显</li>
-      <li>R6 + R15 配合 = nav bar 最终: 仅 [彩奈 标题] [<span class="ic ic-cam"></span>] [<span class="ic ic-call"></span> 通话], 极简</li>
+      <li>R6 + R15 配合 = nav bar 最终: 仅 [彩奈 标题] [📷] [📞 通话], 极简</li>
     </ul>
   </div>
 </div>
@@ -1554,16 +1430,16 @@
       <h3 class="now">现在 dark (system 默认)</h3>
       <div class="iphone"><div class="island"></div>
         <div class="screen dark-frame">
-          <div class="statusbar" style="color: #fff;"><span>9:41</span><span class="right"><span class="sb-wifi"></span><span class="sb-bat"></span></span></div>
-          <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span class="navbar-toolbar">通话&nbsp;&nbsp;拍图&nbsp;&nbsp;设置</span></div>
+          <div class="statusbar" style="color: #fff;"><span>9:41</span><span class="right">📶 🔋</span></div>
+          <div class="navbar"><span></span><span class="navbar-title">彩奈</span><span class="navbar-toolbar">📞 📷 ⚙️</span></div>
           <div class="chat-body">
             <div class="agent-label">Ayana</div>
             <div class="bubble agent">今日 REINS デイリーレポート</div>
             <div class="bubble owner">查一下目黒</div>
             <div class="agent-label">Ayana</div>
-            <div class="bubble agent">目黒区, 今日新規 3 件</div>
+            <div class="bubble agent">目黒区, 今日新規 3 件 ✨</div>
           </div>
-          <div class="input-bar"><div class="input-cap"><span class="ic ic-mic"></span> 聊点啥</div><div class="send-btn">↑</div></div>
+          <div class="input-bar"><div class="input-cap">🎤 聊点啥</div><div class="send-btn">↑</div></div>
         </div>
       </div>
     </div>
@@ -1571,12 +1447,12 @@
       <h3 class="next">改后 (ayana 专属夜色 palette)</h3>
       <div class="iphone"><div class="island"></div>
         <div class="screen" style="background: #0a0e14;">
-          <div class="statusbar" style="color: #f0f0f5;"><span>9:41</span><span class="right"><span class="sb-wifi"></span><span class="sb-bat"></span></span></div>
+          <div class="statusbar" style="color: #f0f0f5;"><span>9:41</span><span class="right">📶 🔋</span></div>
           <div style="height: 44px; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; background: #0a0e14; color: #f0f0f5;">
             <span></span>
             <span style="font-weight: 600;">彩奈</span>
             <span style="display: flex; gap: 8px; align-items: center;">
-              <span style="background: rgba(48, 209, 88, 0.2); color: #30d158; padding: 5px 12px; border-radius: 16px; font-size: 12px;"><span class="ic ic-call"></span> 通话</span>
+              <span style="background: rgba(48, 209, 88, 0.2); color: #30d158; padding: 5px 12px; border-radius: 16px; font-size: 12px;">📞 通话</span>
             </span>
           </div>
           <div style="background: #050811; flex: 1; padding: 14px 12px; display: flex; flex-direction: column; gap: 10px;">
@@ -1584,10 +1460,10 @@
             <div style="background: #1c2230; color: #f0f0f5; max-width: 78%; padding: 10px 14px; border-radius: 18px 18px 18px 4px; font-size: 14px; align-self: flex-start; border: 1px solid rgba(0, 180, 173, 0.15);">今日 REINS デイリーレポート</div>
             <div style="background: #1d4ed8; color: #fff; max-width: 78%; padding: 10px 14px; border-radius: 18px 18px 4px 18px; font-size: 14px; align-self: flex-end;">查一下目黒</div>
             <div style="font-size: 11px; color: #00b4ad; font-weight: 600; align-self: flex-start; margin: 0 0 -4px 4px;">Ayana</div>
-            <div style="background: #1c2230; color: #f0f0f5; max-width: 78%; padding: 10px 14px; border-radius: 18px 18px 18px 4px; font-size: 14px; align-self: flex-start; border: 1px solid rgba(0, 180, 173, 0.15);">目黒区, 今日新規 3 件</div>
+            <div style="background: #1c2230; color: #f0f0f5; max-width: 78%; padding: 10px 14px; border-radius: 18px 18px 18px 4px; font-size: 14px; align-self: flex-start; border: 1px solid rgba(0, 180, 173, 0.15);">目黒区, 今日新規 3 件 ✨</div>
           </div>
           <div style="background: #0a0e14; border-top: 1px solid rgba(255,255,255,0.08); height: 60px; display: flex; align-items: center; padding: 8px 12px; gap: 8px;">
-            <div style="flex: 1; background: rgba(255,255,255,0.06); border-radius: 22px; padding: 8px 14px; color: rgba(255,255,255,0.4); font-size: 13px;"><span class="ic ic-mic"></span> 聊点啥</div>
+            <div style="flex: 1; background: rgba(255,255,255,0.06); border-radius: 22px; padding: 8px 14px; color: rgba(255,255,255,0.4); font-size: 13px;">🎤 聊点啥</div>
             <div style="width: 36px; height: 36px; background: var(--accent); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">↑</div>
           </div>
         </div>
@@ -1602,7 +1478,7 @@
       <li>气泡 owner: <strong>#1d4ed8</strong> 深蓝 (替 system blue, 不刺)</li>
       <li>Agent label: <strong>#00b4ad</strong> teal (现在 cyan 在 dark 太亮)</li>
       <li>Status bar / nav: <strong>#0a0e14</strong> 跟背景细微差 (清晰边界)</li>
-      <li>主 button "<span class="ic ic-call"></span> 通话": teal 半透明 bg + 字 (替 system accent blue, 跟夜色更协调)</li>
+      <li>主 button "📞 通话": teal 半透明 bg + 字 (替 system accent blue, 跟夜色更协调)</li>
     </ul>
   </div>
 </div>
